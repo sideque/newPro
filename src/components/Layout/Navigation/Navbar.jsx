@@ -3,14 +3,6 @@ import { useNavigate, useLocation } from "react-router-dom";
 import {
   FaBars,
   FaTimes,
-  FaHome,
-  FaUser,
-  FaLaptopCode,
-  FaFile,
-  FaEnvelope,
-  FaCogs,
-  FaGithub,
-  FaLinkedin,
   FaArrowRight,
 } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
@@ -21,16 +13,14 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-  const [hoveredItem, setHoveredItem] = useState(null);
 
-  // Navigation items configuration
   const navItems = [
-    { id: "home", label: "Home", icon: FaHome },
-    { id: "about", label: "About", icon: FaUser },
-    { id: "projects", label: "Projects", icon: FaLaptopCode },
-    { id: "tech-stack", label: "Tech Stack", icon: FaCogs },
-    { id: "resume", label: "Resume", icon: FaFile },
-    { id: "contact", label: "Contact", icon: FaEnvelope },
+    { id: "home", label: "Home" },
+    { id: "about", label: "About" },
+    { id: "projects", label: "Projects" },
+    { id: "tech-stack", label: "Tech Stack" },
+    { id: "resume", label: "Resume" },
+    { id: "contact", label: "Contact" },
   ];
 
   useEffect(() => {
@@ -38,7 +28,6 @@ function Navbar() {
       const offset = window.scrollY;
       setScrolled(offset > 50);
 
-      // Determine active section based on scroll position
       const sections = navItems.map(item => item.id);
       const sectionElements = sections.map((id) => document.getElementById(id));
 
@@ -113,314 +102,141 @@ function Navbar() {
 
   return (
     <>
-      <motion.header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled
-            ? "py-2"
-            : "py-4"
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          scrolled ? "py-2" : "py-4"
         }`}
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
       >
-        {/* Main Navbar Container */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className={`relative flex items-center justify-between rounded-2xl transition-all duration-500 ${
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div
+            className={`flex items-center justify-between transition-all duration-300 ${
               scrolled
-                ? "bg-neutral-900/90 backdrop-blur-xl border border-neutral-800/80 shadow-2xl shadow-black/30 px-6 py-3"
-                : "bg-transparent px-2 py-2"
+                ? "bg-neutral-950/80 backdrop-blur-lg border border-neutral-800/60 rounded-full px-6 py-2.5 shadow-lg shadow-black/20"
+                : "px-2 py-2"
             }`}
-            layout
           >
-            {/* Logo Section */}
-            <motion.button
+            {/* Logo */}
+            <button
               onClick={() => scrollToSection("home")}
-              className="relative flex items-center gap-3 group"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              className="flex items-center gap-2.5 group"
             >
-              {/* Animated Logo Container */}
-              <div className="relative">
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-amber-500/60 to-amber-600/40 rounded-xl blur-lg opacity-40 group-hover:opacity-70 transition-opacity duration-300"
-                  animate={{
-                    scale: [1, 1.1, 1],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
+              <div className="w-9 h-9 rounded-full bg-neutral-800 border border-neutral-700/50 flex items-center justify-center overflow-hidden group-hover:border-amber-500/40 transition-colors duration-300">
+                <img 
+                  src="/logo-bg.png" 
+                  alt="Logo" 
+                  className="w-6 h-6 object-contain"
                 />
-                <div className="relative w-11 h-11 bg-gradient-to-br from-neutral-800 to-neutral-900 rounded-xl border border-neutral-700/50 flex items-center justify-center overflow-hidden">
-                  <img 
-                    src="/logo-bg.png" 
-                    alt="GiaSi Dev Logo" 
-                    className="w-8 h-8 object-contain"
-                  />
-                </div>
               </div>
-              
-              {/* Brand Name */}
-              <div className="hidden sm:block">
-                <motion.span 
-                  className="text-xl font-bold bg-gradient-to-r from-neutral-100 via-amber-200 to-neutral-300 bg-clip-text text-transparent"
-                >
-                  GiaSi
-                </motion.span>
-                <span className="text-neutral-500 font-medium text-sm block -mt-1">Developer</span>
-              </div>
-            </motion.button>
+              <span className="hidden sm:block text-lg font-semibold text-neutral-100 tracking-tight">
+                Gia Si
+              </span>
+            </button>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center">
-              {/* Nav Pills Container */}
-              <div className="relative flex items-center gap-1 p-1.5 bg-neutral-800/50 backdrop-blur-sm rounded-2xl border border-neutral-700/30">
-                {navItems.map((item) => (
-                  <motion.button
-                    key={item.id}
-                    onClick={() => scrollToSection(item.id)}
-                    onMouseEnter={() => setHoveredItem(item.id)}
-                    onMouseLeave={() => setHoveredItem(null)}
-                    className={`relative px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 ${
-                      activeSection === item.id
-                        ? "text-neutral-900"
-                        : "text-neutral-400 hover:text-neutral-200"
-                    }`}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    {/* Active Background */}
-                    {activeSection === item.id && (
-                      <motion.div
-                        className="absolute inset-0 bg-gradient-to-r from-amber-400 to-amber-500 rounded-xl shadow-lg shadow-amber-500/20"
-                        layoutId="navbar-active-pill"
-                        transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                      />
-                    )}
-                    
-                    {/* Hover Background */}
-                    {hoveredItem === item.id && activeSection !== item.id && (
-                      <motion.div
-                        className="absolute inset-0 bg-neutral-700/50 rounded-xl"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.2 }}
-                      />
-                    )}
-                    
-                    <span className="relative z-10">{item.label}</span>
-                  </motion.button>
-                ))}
-              </div>
+            <nav className="hidden lg:flex items-center gap-1">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className={`relative px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-full ${
+                    activeSection === item.id
+                      ? "text-amber-400"
+                      : "text-neutral-400 hover:text-neutral-100"
+                  }`}
+                >
+                  {item.label}
+                  {activeSection === item.id && (
+                    <motion.div
+                      className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-amber-400"
+                      layoutId="nav-dot"
+                      transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                    />
+                  )}
+                </button>
+              ))}
             </nav>
 
-            {/* Desktop Right Section */}
-            <div className="hidden lg:flex items-center gap-3">
-              {/* Social Links */}
-              <div className="flex items-center gap-2 mr-2">
-                <motion.a
-                  href="https://github.com/giasinguyen"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="w-10 h-10 rounded-xl bg-neutral-800/50 border border-neutral-700/30 flex items-center justify-center text-neutral-400 hover:text-white hover:bg-neutral-700/50 hover:border-neutral-600 transition-all duration-300"
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <FaGithub className="w-5 h-5" />
-                </motion.a>
-                <motion.a
-                  href="https://linkedin.com/in/giasinguyen"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="w-10 h-10 rounded-xl bg-neutral-800/50 border border-neutral-700/30 flex items-center justify-center text-neutral-400 hover:text-amber-400 hover:bg-neutral-700/50 hover:border-amber-500/30 transition-all duration-300"
-                  whileHover={{ scale: 1.1, rotate: -5 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <FaLinkedin className="w-5 h-5" />
-                </motion.a>
-              </div>
-
-              {/* CTA Button */}
-              <motion.button
+            {/* Desktop CTA */}
+            <div className="hidden lg:block">
+              <button
                 onClick={() => scrollToSection("contact")}
-                className="group relative px-6 py-2.5 rounded-xl font-semibold text-sm overflow-hidden"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                className="group px-5 py-2 bg-amber-500 hover:bg-amber-400 text-neutral-900 text-sm font-semibold rounded-full transition-colors duration-200 flex items-center gap-2"
               >
-                {/* Button Background */}
-                <div className="absolute inset-0 bg-gradient-to-r from-amber-500 to-amber-600 transition-all duration-300" />
-                <div className="absolute inset-0 bg-gradient-to-r from-amber-400 to-amber-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                
-                {/* Shine Effect */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-                </div>
-                
-                <span className="relative z-10 flex items-center gap-2 text-neutral-900">
-                  Let's Talk
-                  <FaArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform duration-300" />
-                </span>
-              </motion.button>
+                Let's Talk
+                <FaArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform duration-200" />
+              </button>
             </div>
 
             {/* Mobile Menu Button */}
-            <motion.button
+            <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden relative w-12 h-12 rounded-xl bg-neutral-800/50 backdrop-blur-sm border border-neutral-700/30 flex items-center justify-center text-neutral-300 hover:text-white transition-colors duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              className="lg:hidden w-10 h-10 rounded-full bg-neutral-800/60 border border-neutral-700/40 flex items-center justify-center text-neutral-300 hover:text-white transition-colors duration-200"
               aria-label={isOpen ? "Close menu" : "Open menu"}
             >
-              <AnimatePresence mode="wait">
-                {isOpen ? (
-                  <motion.div
-                    key="close"
-                    initial={{ rotate: -90, opacity: 0 }}
-                    animate={{ rotate: 0, opacity: 1 }}
-                    exit={{ rotate: 90, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <FaTimes className="w-5 h-5" />
-                  </motion.div>
-                ) : (
-                  <motion.div
-                    key="menu"
-                    initial={{ rotate: 90, opacity: 0 }}
-                    animate={{ rotate: 0, opacity: 1 }}
-                    exit={{ rotate: -90, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <FaBars className="w-5 h-5" />
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.button>
-          </motion.div>
+              {isOpen ? <FaTimes className="w-4 h-4" /> : <FaBars className="w-4 h-4" />}
+            </button>
+          </div>
         </div>
-      </motion.header>
+      </header>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <>
-            {/* Backdrop */}
             <motion.div
-              className="fixed inset-0 bg-black/70 backdrop-blur-sm z-40 lg:hidden"
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsOpen(false)}
             />
 
-            {/* Mobile Menu Panel */}
             <motion.div
-              className="fixed top-0 right-0 h-full w-full max-w-sm bg-neutral-900/98 backdrop-blur-xl border-l border-neutral-800/80 z-50 lg:hidden overflow-hidden"
+              className="fixed top-0 right-0 h-full w-full max-w-xs bg-neutral-950 border-l border-neutral-800/60 z-50 lg:hidden flex flex-col"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
             >
-              {/* Menu Header */}
-              <div className="flex items-center justify-between p-6 border-b border-neutral-800/80">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl flex items-center justify-center">
-                    <img 
-                      src="/logo-bg.png" 
-                      alt="Logo" 
-                      className="w-7 h-7 object-contain"
-                    />
-                  </div>
-                  <div>
-                    <span className="text-lg font-bold text-white">Menu</span>
-                    <p className="text-xs text-neutral-500">Navigate to sections</p>
-                  </div>
-                </div>
-                <motion.button
+              {/* Header */}
+              <div className="flex items-center justify-between px-6 py-5 border-b border-neutral-800/60">
+                <span className="text-base font-semibold text-neutral-100">Navigation</span>
+                <button
                   onClick={() => setIsOpen(false)}
-                  className="w-10 h-10 rounded-xl bg-neutral-800/50 border border-neutral-700/30 flex items-center justify-center text-neutral-400 hover:text-white transition-colors"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  className="w-9 h-9 rounded-full bg-neutral-800/60 border border-neutral-700/40 flex items-center justify-center text-neutral-400 hover:text-white transition-colors"
                 >
-                  <FaTimes className="w-5 h-5" />
-                </motion.button>
+                  <FaTimes className="w-4 h-4" />
+                </button>
               </div>
 
-              {/* Navigation Links */}
-              <div className="p-4 space-y-2">
+              {/* Links */}
+              <div className="flex-1 px-4 py-4 space-y-1">
                 {navItems.map((item, index) => (
                   <motion.button
                     key={item.id}
                     onClick={() => handleMobileNavClick(item.id)}
-                    className={`group w-full flex items-center gap-4 p-4 rounded-2xl transition-all duration-300 ${
+                    className={`w-full text-left px-4 py-3.5 rounded-xl text-sm font-medium transition-colors duration-200 ${
                       activeSection === item.id
-                        ? "bg-gradient-to-r from-amber-500/10 to-amber-600/10 border border-amber-500/20"
-                        : "hover:bg-neutral-800/50 border border-transparent"
+                        ? "text-amber-400 bg-amber-500/8"
+                        : "text-neutral-400 hover:text-neutral-100 hover:bg-neutral-800/40"
                     }`}
-                    initial={{ opacity: 0, x: 50 }}
+                    initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.05 + 0.1 }}
-                    whileTap={{ scale: 0.98 }}
+                    transition={{ delay: index * 0.04 + 0.1 }}
                   >
-                    {/* Icon */}
-                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 ${
-                      activeSection === item.id
-                        ? "bg-gradient-to-br from-amber-500 to-amber-600 text-neutral-900 shadow-lg shadow-amber-500/20"
-                        : "bg-neutral-800/50 text-neutral-400 group-hover:bg-neutral-700/50 group-hover:text-amber-400"
-                    }`}>
-                      <item.icon className="w-5 h-5" />
-                    </div>
-                    
-                    {/* Label */}
-                    <div className="flex-1 text-left">
-                      <span className={`font-medium transition-colors duration-300 ${
-                        activeSection === item.id ? "text-white" : "text-neutral-300 group-hover:text-white"
-                      }`}>
-                        {item.label}
-                      </span>
-                      {activeSection === item.id && (
-                        <span className="block text-xs text-amber-400 mt-0.5">Current section</span>
-                      )}
-                    </div>
-
-                    {/* Arrow */}
-                    <FaArrowRight className={`w-4 h-4 transition-all duration-300 ${
-                      activeSection === item.id
-                        ? "text-amber-400"
-                        : "text-neutral-600 group-hover:text-neutral-400 group-hover:translate-x-1"
-                    }`} />
+                    {item.label}
                   </motion.button>
                 ))}
               </div>
 
-              {/* Social Links */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-neutral-800/80 bg-neutral-900/80 backdrop-blur-sm">
-                <p className="text-xs text-neutral-500 mb-4 uppercase tracking-wider">Connect with me</p>
-                <div className="flex items-center gap-3">
-                  <motion.a
-                    href="https://github.com/giasinguyen"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-neutral-800/50 border border-neutral-700/30 text-neutral-300 hover:text-white hover:bg-neutral-700/50 transition-all duration-300"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    <FaGithub className="w-5 h-5" />
-                    <span className="text-sm font-medium">GitHub</span>
-                  </motion.a>
-                  <motion.a
-                    href="https://linkedin.com/in/giasinguyen"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 hover:bg-amber-500/20 transition-all duration-300"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    <FaLinkedin className="w-5 h-5" />
-                    <span className="text-sm font-medium">LinkedIn</span>
-                  </motion.a>
-                </div>
+              {/* Bottom CTA */}
+              <div className="px-4 py-5 border-t border-neutral-800/60">
+                <button
+                  onClick={() => handleMobileNavClick("contact")}
+                  className="w-full py-3 bg-amber-500 hover:bg-amber-400 text-neutral-900 text-sm font-semibold rounded-xl transition-colors duration-200"
+                >
+                  Let's Talk
+                </button>
               </div>
             </motion.div>
           </>
