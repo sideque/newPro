@@ -22,8 +22,8 @@ function Resume() {
 
   const handleDownloadPDF = useCallback(() => {
     const link = document.createElement('a')
-    link.href = '/documents/NguyenTranGiaSi_Intern_JAVA_Backend.pdf'
-    link.download = 'NguyenTranGiaSi_Intern_JAVA_Backend.pdf'
+    link.href = '/documents/NguyenTranGiaSi_Intern_Backend_Developer.pdf'
+    link.download = 'NguyenTranGiaSi_Intern_Backend_Developer.pdf'
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)

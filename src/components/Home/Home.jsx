@@ -114,7 +114,7 @@ function Home() {
     const check = () => {
       const mobile = window.innerWidth < 768;
       const prefersReduced = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
+        "(prefers-reduced-motion: reduce)",
       ).matches;
       setIsMobile(mobile);
       setAnimationsEnabled(!mobile && !prefersReduced);
@@ -138,7 +138,7 @@ function Home() {
       tl.fromTo(
         ".hero-element",
         { y: 40, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.7, stagger: 0.12, ease: "power3.out" }
+        { y: 0, opacity: 1, duration: 0.7, stagger: 0.12, ease: "power3.out" },
       );
       return () => tl.kill();
     }, 80);
@@ -157,15 +157,24 @@ function Home() {
       {/* ── Background gradient orbs ── */}
       <GradientOrb
         className="w-[600px] h-[600px] -top-40 -left-40 animate-float"
-        style={{ background: "radial-gradient(circle, rgba(245,158,11,.35) 0%, transparent 70%)" }}
+        style={{
+          background:
+            "radial-gradient(circle, rgba(245,158,11,.35) 0%, transparent 70%)",
+        }}
       />
       <GradientOrb
         className="w-[500px] h-[500px] top-1/2 -right-40 animate-float delay-700"
-        style={{ background: "radial-gradient(circle, rgba(234,179,8,.2) 0%, transparent 70%)" }}
+        style={{
+          background:
+            "radial-gradient(circle, rgba(234,179,8,.2) 0%, transparent 70%)",
+        }}
       />
       <GradientOrb
         className="w-[350px] h-[350px] bottom-20 left-1/3 animate-float delay-1000"
-        style={{ background: "radial-gradient(circle, rgba(251,191,36,.15) 0%, transparent 70%)" }}
+        style={{
+          background:
+            "radial-gradient(circle, rgba(251,191,36,.15) 0%, transparent 70%)",
+        }}
       />
 
       {/* ── Subtle grid overlay ── */}
@@ -178,7 +187,10 @@ function Home() {
         }}
       />
 
-      <div className="section-padding max-w-7xl mx-auto w-full pt-28 pb-20" ref={heroRef}>
+      <div
+        className="section-padding max-w-7xl mx-auto w-full pt-28 pb-20"
+        ref={heroRef}
+      >
         {/* ══════════ TOP: Split hero ══════════ */}
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-center mb-16">
           {/* ── LEFT COL (3/5) ── */}
@@ -210,8 +222,6 @@ function Home() {
                   <span className="bg-gradient-to-r from-amber-300 via-amber-400 to-amber-600 bg-clip-text text-transparent">
                     Gia Si
                   </span>
-                  {/* Animated underline */}
-                  <span className="absolute -bottom-2 left-0 h-1.5 w-full rounded-full bg-gradient-to-r from-amber-500 to-amber-600 animate-pulse-slow" />
                 </span>
               </span>
             </h1>
@@ -242,8 +252,8 @@ function Home() {
               <span className="text-amber-400 font-semibold">
                 Java, Spring Boot & React
               </span>
-              . Leading teams to ship real-world products — from e-commerce platforms to real-time
-              messaging apps.
+              . Leading teams to ship real-world products — from e-commerce
+              platforms to real-time messaging apps.
             </p>
 
             {/* CTA row */}
@@ -263,7 +273,7 @@ function Home() {
                 Contact Me
               </button>
               <a
-                href="/documents/NguyenTranGiaSi_Intern_JAVA_Backend.pdf"
+                href="/documents/NguyenTranGiaSi_Intern_Backend_Developer.pdf"
                 download
                 className="px-7 py-3.5 text-base font-medium text-neutral-300 hover:text-amber-400 bg-neutral-900/60 hover:bg-neutral-800/60 border border-neutral-800/50 hover:border-amber-500/20 rounded-xl transition-all duration-300 flex items-center gap-2.5"
               >

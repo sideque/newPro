@@ -319,58 +319,7 @@ function TechStack() {
             </div>
           </div>
 
-          {/* Call to Action */}
-          <motion.div
-            className="text-center glass-effect rounded-3xl p-12 border border-neutral-700/50"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <motion.div
-              className="w-16 h-16 bg-gradient-to-r from-amber-500 to-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-6"
-              initial={{ scale: 0, rotate: -180 }}
-              whileInView={{ scale: 1, rotate: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <FaRocket className="text-neutral-900 text-2xl" />
-            </motion.div>
 
-            <h3 className="text-3xl font-bold text-neutral-100 mb-4">
-              Let's Build Something Amazing
-            </h3>
-
-            <p className="text-neutral-400 text-lg mb-8 max-w-2xl mx-auto">
-              Ready to leverage these technologies for your next project? 
-              Let's discuss how we can create innovative solutions together.
-            </p>
-
-            <motion.div
-              className="flex flex-wrap justify-center gap-4"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              viewport={{ once: true }}
-            >
-              <motion.a
-                href="#contact"
-                className="btn-primary inline-flex items-center gap-3 px-8 py-4 text-lg"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Get In Touch
-              </motion.a>
-              <motion.a
-                href="#projects"
-                className="btn-secondary inline-flex items-center gap-3 px-8 py-4 text-lg"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                View Projects
-              </motion.a>
-            </motion.div>
-          </motion.div>
         </div>
       </section>
     </>
