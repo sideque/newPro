@@ -1,5 +1,33 @@
 [
   {
+    "id": 7,
+    "title": "Nexatech – E-Commerce Platform",
+    "description": "Scalable e-commerce system using Micro Frontend (Next.js Module Federation) and Microservice patterns, with independently deployable services (Auth, Blog, Host App). Features user authentication, product catalog, shopping cart, order management, blog module, and admin dashboard.",
+    "image": "https://user-content.gitlab-static.net/258a0f852c00588fefd40e5ce956e9f14ea1ba60/68747470733a2f2f692e6962622e636f2f37784a37445735512f6e657861746563682d62672e6a7067",
+    "tags": ["Next.js", "React", "TypeScript", "TailwindCSS", "Spring Boot", "Microservices", "JWT", "Module Federation"],
+    "category": "fullstack",
+    "githubUrl": "https://gitlab.com/giasinguyen/nexatech-ecommerce",
+    "demoUrl": "https://gitlab.com/giasinguyen/nexatech-ecommerce",
+    "period": "March 2026 – Present",
+    "role": "Team Leader & Fullstack Developer",
+    "teamSize": 4,
+    "featured": true
+  },
+  {
+    "id": 8,
+    "title": "Chatly – Real-time Messaging Platform",
+    "description": "Scalable real-time messaging platform supporting 1–1 and group chat with Spring Boot, WebSocket (STOMP), PostgreSQL, MongoDB, and Redis. Mobile client built with React Native (Expo). Features real-time messaging, presence & typing indicators, media upload (S3), and read receipts.",
+    "image": "https://github.com/giasinguyen/chatly-messaging-platform/raw/main/_resources/images/chatly-logo-transparent.png",
+    "tags": ["Spring Boot", "WebSocket", "React Native", "PostgreSQL", "MongoDB", "Redis", "TypeScript", "S3"],
+    "category": "fullstack",
+    "githubUrl": "https://github.com/giasinguyen/chatly",
+    "demoUrl": "https://github.com/giasinguyen/chatly",
+    "period": "March 2026 – Present",
+    "role": "Team Leader & Fullstack Developer",
+    "teamSize": 4,
+    "featured": true
+  },
+  {
     "id": 1,
     "title": "Aurora Hotel Management",
     "description": "Enterprise-grade hotel management platform with AI-powered RAG chatbot using Google Gemini, RBAC with 70+ permissions, multi-branch management, booking system, and comprehensive analytics dashboard.",

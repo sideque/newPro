@@ -32,6 +32,30 @@ function Resume() {
   // Memoize static data for performance - Updated with real resume content
   const experiences = useMemo(() => [
     {
+      title: "Team Leader & Fullstack Developer",
+      company: "Nexatech – E-Commerce Platform",
+      period: "March 2026 - Present",
+      location: "Ho Chi Minh City, Vietnam",
+      achievements: [
+        "Architected a scalable e-commerce system using Micro Frontend (Next.js Module Federation) and Microservice patterns",
+        "Led a team of 4 developers with independently deployable services (Auth, Blog, Host App)",
+        "Tech stack: Next.js, React, TypeScript, TailwindCSS (Frontend); Spring Boot microservices, RESTful APIs, JWT (Backend)",
+        "Implemented user authentication, product catalog, shopping cart, order management, blog module, and admin dashboard"
+      ]
+    },
+    {
+      title: "Team Leader & Fullstack Developer",
+      company: "Chatly – Real-time Messaging Platform",
+      period: "March 2026 - Present",
+      location: "Ho Chi Minh City, Vietnam",
+      achievements: [
+        "Built a scalable real-time messaging platform supporting 1–1 and group chat",
+        "Backend: Spring Boot, WebSocket (STOMP), PostgreSQL, MongoDB, and Redis",
+        "Mobile: React Native (Expo) + React, TypeScript, TailwindCSS",
+        "Features: real-time messaging, presence & typing indicators, media upload (S3), and read receipts"
+      ]
+    },
+    {
       title: "Fullstack Developer",
       company: "Personal Projects",
       period: "April 2025 - Present",
