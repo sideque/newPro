@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Logo & Title -->
-<img src="public/logo.png" alt="GiaSi Portfolio Logo" width="140" height="140" style="border-radius: 20px;" />
+<!-- <img src="public/logo.png" alt="GiaSi Portfolio Logo" width="140" height="140" style="border-radius: 20px;" /> -->
 
 # 🚀 GiaSi Developer Portfolio
 
