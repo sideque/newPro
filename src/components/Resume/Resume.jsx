@@ -151,7 +151,7 @@ function Resume() {
       <section className="section-padding pt-28">
         <div className="max-w-6xl mx-auto">
           {/* Header Section */}
-          <div className="text-center mb-16">
+          {/* <div className="text-center mb-16">
             <motion.div
               className="inline-flex items-center gap-3 px-6 py-3 rounded-full glass-effect border border-neutral-700/50 mb-8"
               initial={{ opacity: 0, y: 20 }}
@@ -190,10 +190,10 @@ function Resume() {
               my professional experience, skills, and achievements.
             </motion.p>
 
-          </div>
+          </div> */}
 
           {/* PDF Viewer */}
-          <AnimatePresence>
+          {/* <AnimatePresence>
             {showPDF && (
               <motion.div
                 className="mb-16"
@@ -232,7 +232,7 @@ function Resume() {
                     />
                     
                     {/* Fallback for browsers that don't support PDF viewing */}
-                    <div className={`text-center mt-4 p-4 bg-neutral-700/30 rounded-lg ${pdfError ? 'bg-red-900/20 border border-red-500/30' : ''}`}>
+                    {/* <div className={`text-center mt-4 p-4 bg-neutral-700/30 rounded-lg ${pdfError ? 'bg-red-900/20 border border-red-500/30' : ''}`}>
                       <p className="text-neutral-400 text-sm mb-3">
                         {pdfError ? 'PDF failed to load, but you can still access it!' : "Can't see the PDF? No problem!"}
                       </p>
@@ -257,12 +257,12 @@ function Resume() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
+              </motion.div> */}
+            {/* )} */}
+          {/* </AnimatePresence> */} 
 
           {/* Experience Section */}
-          <div className="mb-16">
+          {/* <div className="mb-16">
             <div className="text-center mb-12">
               <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full glass-effect border border-neutral-700/50 mb-6">
                 <FaBriefcase className="w-5 h-5 text-amber-400" />
@@ -317,12 +317,12 @@ function Resume() {
                 </motion.div>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Education, Certifications & Awards */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-16">
+          {/* <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-16">
             {/* Education */}
-            <div className="min-h-[600px] flex flex-col">
+            {/* <div className="min-h-[600px] flex flex-col">
               <div className="text-center mb-8">
                 <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full glass-effect border border-neutral-700/50 mb-4">
                   <FaGraduationCap className="w-5 h-5 text-amber-400" />
@@ -370,10 +370,10 @@ function Resume() {
                 </motion.div>
               ))}
               </div>
-            </div>
+            </div> */}
 
             {/* Certifications */}
-            <div className="min-h-[600px] flex flex-col">
+            {/* <div className="min-h-[600px] flex flex-col">
               <div className="text-center mb-8">
                 <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full glass-effect border border-neutral-700/50 mb-4">
                   <FaCertificate className="w-5 h-5 text-amber-400" />
@@ -419,11 +419,11 @@ function Resume() {
                 ))}
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* Awards & Scholarships */}
-            <div className="min-h-[600px] flex flex-col">
-              <div className="text-center mb-8">
+            {/* <div className="min-h-[600px] flex flex-col"> */}
+              {/* <div className="text-center mb-8">
                 <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full glass-effect border border-neutral-700/50 mb-4">
                   <FaAward className="w-5 h-5 text-amber-400" />
                   <span className="text-lg font-semibold text-neutral-300">
@@ -433,9 +433,9 @@ function Resume() {
                 <h2 className="text-2xl font-bold gradient-text">
                   Awards & Recognition
                 </h2>
-              </div>
+              </div> */}
 
-              <div className="space-y-4">
+              {/* <div className="space-y-4">
                 {awards.map((award, index) => (
                   <motion.div
                     key={index}
@@ -450,9 +450,9 @@ function Resume() {
                     }}
                   >
                     {/* Award background gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-amber-500/5 to-yellow-500/5 rounded-xl"></div>
+                    {/* <div className="absolute inset-0 bg-gradient-to-r from-amber-500/5 to-yellow-500/5 rounded-xl"></div> */}
                     
-                    <div className="relative">
+                    {/* <div className="relative">
                       <div className="flex items-start justify-between mb-3">
                         <div className="flex items-center gap-3">
                           <div className="w-10 h-10 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-lg flex items-center justify-center">
@@ -484,12 +484,12 @@ function Resume() {
                       <p className="text-neutral-400 text-sm leading-relaxed">
                         {award.description}
                       </p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </div>
+                    </div> */}
+                  {/* </motion.div> */}
+                {/* ))} */}
+              {/* </div> */} 
+            {/* </div> */}
+          {/* </div> */} 
 
           {/* Call to Action */}
           <motion.div

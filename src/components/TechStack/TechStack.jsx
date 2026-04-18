@@ -2,138 +2,163 @@ import { useMemo } from 'react'
 import { motion } from 'framer-motion'
 import SEOHead from '../SEO/SEOHead'
 import { SEO_CONFIGS } from '../SEO/seoConfigs'
+
 import { 
-  SiSpringboot, 
   SiReact, 
   SiTailwindcss, 
-  SiMysql, 
   SiMongodb, 
-  SiDocker, 
   SiGit,
-  SiIntellijidea,
   SiPostman,
-  SiMariadb,
   SiFramer,
   SiCloudinary,
   SiVercel,
   SiGithub,
   SiJavascript,
-  SiTypescript,
-  SiNeo4J
+  SiNodedotjs,
+  SiBootstrap,
+  SiEjs,
+  SiJsonwebtokens
 } from 'react-icons/si'
-import { FaDatabase, FaTools, FaCloud, FaRocket, FaJava, FaCube, FaBox, FaCode, FaBrain } from 'react-icons/fa'
+
+import { 
+  FaDatabase, 
+  FaTools, 
+  FaCloud, 
+  FaRocket, 
+  FaCode, 
+  FaBrain 
+} from 'react-icons/fa'
 
 function TechStack() {
-  // Tech Stack data organized by categories
-  const techCategories = useMemo(() => [
-    {
-      id: 1,
-      title: "Backend Development",
-      icon: FaCode,
-      color: "text-orange-400",
-      bgColor: "bg-orange-500/10",
-      borderColor: "border-orange-500/20",
-      technologies: [
-        { name: "Java", icon: FaJava, level: "Expert", color: "#ED8B00" },
-        { name: "Spring Boot", icon: SiSpringboot, level: "Advanced", color: "#6DB33F" },
-        { name: "Spring Security", icon: SiSpringboot, level: "Advanced", color: "#6DB33F" },
-        { name: "Spring Data JPA", icon: SiSpringboot, level: "Advanced", color: "#6DB33F" },
-        { name: "WebSocket", icon: FaCode, level: "Intermediate", color: "#FF6B6B" },
-        { name: "Maven", icon: FaBox, level: "Proficient", color: "#C71A36" }
-      ]
-    },
-    {
-      id: 2,
-      title: "Frontend Development",
-      icon: FaRocket,
-      color: "text-amber-400",
-      bgColor: "bg-amber-500/10",
-      borderColor: "border-amber-500/20",
-      technologies: [
-        { name: "React.js", icon: SiReact, level: "Advanced", color: "#61DAFB" },
-        { name: "TailwindCSS", icon: SiTailwindcss, level: "Expert", color: "#06B6D4" },
-        { name: "Three.js", icon: FaCube, level: "Intermediate", color: "#000000" },
-        { name: "Framer Motion", icon: SiFramer, level: "Advanced", color: "#0055FF" }
-      ]
-    },
-    {
-      id: 3,
-      title: "Database Systems",
-      icon: FaDatabase,
-      color: "text-green-400",
-      bgColor: "bg-green-500/10",
-      borderColor: "border-green-500/20",
-      technologies: [
-        { name: "MySQL", icon: SiMysql, level: "Advanced", color: "#4479A1" },
-        { name: "MariaDB", icon: SiMariadb, level: "Advanced", color: "#003545" },
-        { name: "MongoDB", icon: SiMongodb, level: "Intermediate", color: "#47A248" },
-        { name: "Neo4J", icon: SiNeo4J, level: "Beginner", color: "#008CC1" }
-      ]
-    },
-    {
-      id: 4,
-      title: "Development Tools",
-      icon: FaTools,
-      color: "text-purple-400",
-      bgColor: "bg-purple-500/10",
-      borderColor: "border-purple-500/20",
-      technologies: [
-        { name: "IntelliJ IDEA", icon: SiIntellijidea, level: "Expert", color: "#000000" },
-        { name: "VS Code", icon: FaCode, level: "Advanced", color: "#007ACC" },
-        { name: "Git", icon: SiGit, level: "Advanced", color: "#F05032" },
-        { name: "Postman", icon: SiPostman, level: "Proficient", color: "#FF6C37" }
-      ]
-    },
-    {
-      id: 5,
-      title: "Cloud & Deployment",
-      icon: FaCloud,
-      color: "text-cyan-400",
-      bgColor: "bg-cyan-500/10",
-      borderColor: "border-cyan-500/20",
-      technologies: [
-        { name: "Docker", icon: SiDocker, level: "Intermediate", color: "#2496ED" },
-        { name: "Vercel", icon: SiVercel, level: "Advanced", color: "#000000" },
-        { name: "Cloudinary", icon: SiCloudinary, level: "Proficient", color: "#3448C5" },
-        { name: "GitHub", icon: SiGithub, level: "Advanced", color: "#181717" }
-      ]
-    },
-    {
-      id: 6,
-      title: "AI & Automation",
-      icon: FaBrain,
-      color: "text-amber-300",
-      bgColor: "bg-amber-500/10", 
-      borderColor: "border-amber-500/20",
-      technologies: [
-        { name: "ChatGPT", icon: FaBrain, level: "Advanced", color: "#10A37F" },
-        { name: "Claude AI", icon: FaBrain, level: "Proficient", color: "#CC785C" }
-      ]
-    }
-  ], [])
 
-  // Project highlights using tech stack
+  // ✅ YOUR TECH STACK
+  const techCategories = useMemo(() => [
+  {
+    id: 1,
+    title: "Backend Development",
+    icon: FaCode,
+    color: "text-green-400",
+    bgColor: "bg-green-500/10",
+    borderColor: "border-green-500/20",
+    technologies: [
+      { name: "Node.js", icon: SiNodedotjs, level: "Advanced", color: "#339933" },
+      { name: "Express.js", icon: FaCode, level: "Advanced", color: "#ffffff" },
+      { name: "Java", icon: FaCode, level: "Intermediate", color: "#f89820" },
+      { name: "C Programming", icon: FaCode, level: "Intermediate", color: "#A8B9CC" },
+      { name: "JWT Authentication", icon: SiJsonwebtokens, level: "Advanced", color: "#000000" },
+      { name: "Nodemailer (OTP)", icon: FaCode, level: "Proficient", color: "#00C853" }
+    ]
+  },
+  {
+    id: 2,
+    title: "Frontend Development",
+    icon: FaRocket,
+    color: "text-amber-400",
+    bgColor: "bg-amber-500/10",
+    borderColor: "border-amber-500/20",
+    technologies: [
+      { name: "React.js", icon: SiReact, level: "Advanced", color: "#61DAFB" },
+      { name: "Next.js", icon: FaCode, level: "Advanced", color: "#000000" },
+      { name: "JavaScript", icon: SiJavascript, level: "Advanced", color: "#F7DF1E" },
+      { name: "HTML5", icon: FaCode, level: "Advanced", color: "#E34F26" },
+      { name: "CSS3", icon: FaCode, level: "Advanced", color: "#1572B6" },
+      { name: "TailwindCSS", icon: SiTailwindcss, level: "Advanced", color: "#06B6D4" },
+      { name: "Bootstrap", icon: SiBootstrap, level: "Intermediate", color: "#7952B3" },
+      { name: "Framer Motion", icon: SiFramer, level: "Advanced", color: "#0055FF" }
+    ]
+  },
+  {
+    id: 3,
+    title: "Database Systems",
+    icon: FaDatabase,
+    color: "text-green-400",
+    bgColor: "bg-green-500/10",
+    borderColor: "border-green-500/20",
+    technologies: [
+      { name: "MongoDB", icon: SiMongodb, level: "Advanced", color: "#47A248" },
+      { name: "MySQL", icon: FaDatabase, level: "Advanced", color: "#4479A1" },
+      { name: "PostgreSQL", icon: FaDatabase, level: "Intermediate", color: "#336791" }
+    ]
+  },
+  {
+    id: 4,
+    title: "Development Tools",
+    icon: FaTools,
+    color: "text-purple-400",
+    bgColor: "bg-purple-500/10",
+    borderColor: "border-purple-500/20",
+    technologies: [
+      { name: "Git", icon: SiGit, level: "Advanced", color: "#F05032" },
+      { name: "GitHub", icon: SiGithub, level: "Advanced", color: "#181717" },
+      { name: "Postman", icon: SiPostman, level: "Proficient", color: "#FF6C37" },
+      { name: "pnpm", icon: FaCode, level: "Intermediate", color: "#f69220" }
+    ]
+  },
+  {
+    id: 5,
+    title: "Cloud & Deployment",
+    icon: FaCloud,
+    color: "text-cyan-400",
+    bgColor: "bg-cyan-500/10",
+    borderColor: "border-cyan-500/20",
+    technologies: [
+      { name: "AWS", icon: FaCloud, level: "Beginner", color: "#FF9900" },
+      { name: "Vercel", icon: SiVercel, level: "Advanced", color: "#000000" },
+      { name: "GoDaddy", icon: FaCloud, level: "Beginner", color: "#00A4A6" },
+      { name: "Cloudinary", icon: SiCloudinary, level: "Proficient", color: "#3448C5" }
+    ]
+  },
+  {
+    id: 6,
+    title: "AI & Modern Tools",
+    icon: FaBrain,
+    color: "text-amber-300",
+    bgColor: "bg-amber-500/10", 
+    borderColor: "border-amber-500/20",
+    technologies: [
+      { name: "ChatGPT", icon: FaBrain, level: "Advanced", color: "#10A37F" },
+      { name: "Grok", icon: FaBrain, level: "Advanced", color: "#10A37F" },
+      { name: "Cursor AI", icon: FaBrain, level: "Advanced", color: "#10A37F" },
+      { name: "Lovable AI", icon: FaBrain, level: "Intermediate", color: "#ffffff" },
+      { name: "Cloud AI", icon: FaBrain, level: "Advanced", color: "#10A37F" },
+      { name: "Antigravity", icon: FaBrain, level: "Advanced", color: "#10A37F" }
+    ]
+  },
+  {
+    id: 7,
+    title: "Design",
+    icon: FaCode,
+    color: "text-pink-400",
+    bgColor: "bg-pink-500/10",
+    borderColor: "border-pink-500/20",
+    technologies: [
+      { name: "Figma", icon: FaCode, level: "Intermediate", color: "#F24E1E" }
+    ]
+  }
+], [])
+
+  // ✅ YOUR PROJECTS
   const projectHighlights = useMemo(() => [
     {
       id: 1,
-      name: "CodeHub Platform",
-      description: "Full-stack collaboration platform with real-time features",
-      techUsed: ["Java 23", "Spring Boot", "React", "WebSocket", "MariaDB"],
-      highlight: "Real-time code collaboration with 70+ language support"
+      name: "MobiVault – E-Commerce Platform",
+      description: "Full-stack e-commerce platform with user authentication, admin dashboard, and order management system",
+      techUsed: ["MongoDB", "Express", "Node.js", "EJS", "JWT"],
+      highlight: "OTP authentication, admin dashboard, coupon system & order management"
     },
     {
       id: 2,
-      name: "NatureGrain E-commerce",
-      description: "Complete e-commerce solution with admin dashboard",
-      techUsed: ["Spring Security", "React", "MySQL", "Cloudinary"],
-      highlight: "JWT authentication with comprehensive admin panel"
+      name: "Developer Portfolio",
+      description: "Modern responsive portfolio showcasing projects, skills, and development journey",
+      techUsed: ["React", "TailwindCSS", "Framer Motion", "Vite"],
+      highlight: "Clean UI with animations and responsive design"
     },
     {
       id: 3,
-      name: "Portfolio Website",
-      description: "Modern responsive portfolio with 3D animations",
-      techUsed: ["React 19", "Three.js", "TailwindCSS 4", "Framer Motion"],
-      highlight: "Performance-optimized with engaging user experience"
+      name: "Santa Good Deeds",
+      description: "Community-based web app built during Brocamp Hackathon",
+      techUsed: ["Node.js", "Express", "MongoDB"],
+      highlight: "Community-driven web app developed during Brocamp Hackathon to promote positive actions"
     }
   ], [])
 
@@ -152,7 +177,8 @@ function TechStack() {
       <SEOHead {...SEO_CONFIGS.techStack} />
       <section className="section-padding pt-28">
         <div className="max-w-6xl mx-auto">
-          {/* Header Section */}
+
+          {/* Header */}
           <div className="text-center mb-16">
             <motion.div
               className="inline-flex items-center gap-3 px-6 py-3 rounded-full glass-effect border border-neutral-700/50 mb-8"

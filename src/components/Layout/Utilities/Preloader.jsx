@@ -77,7 +77,7 @@ const Preloader = memo(function Preloader() {
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.6 }}
                 >
-                  "Gia Si"
+                  "Sidhique"
                 </motion.span>
                 <span className="text-neutral-500">;</span>
               </div>

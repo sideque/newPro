@@ -120,14 +120,14 @@ function Navbar() {
               <div className="absolute -inset-2 bg-amber-500/0 group-hover:bg-amber-500/5 rounded-2xl transition-colors duration-300" />
               <div className="relative w-10 h-10 rounded-xl bg-gradient-to-br from-neutral-800 to-neutral-900 border border-neutral-700/50 group-hover:border-amber-500/40 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(245,158,11,0.1)]">
                 <img
-                  src="/logo-bg.png"
+                  src="/firstP.jpg"
                   alt="Logo"
                   className="w-6 h-6 object-contain"
                 />
               </div>
               <div className="hidden sm:flex flex-col relative">
                 <span className="text-base font-bold text-neutral-100 tracking-tight leading-tight">
-                  Gia Si
+                  Sidhique
                 </span>
                 <span className="text-[10px] text-neutral-500 font-medium tracking-wider uppercase">
                   Developer
@@ -251,7 +251,7 @@ function Navbar() {
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-500/20 to-amber-600/10 border border-amber-500/20 flex items-center justify-center">
                     <img
-                      src="/logo-bg.png"
+                      src="/firstP.jpg"
                       alt="Logo"
                       className="w-5 h-5 object-contain"
                     />
@@ -261,7 +261,7 @@ function Navbar() {
                       Navigation
                     </span>
                     <span className="text-[10px] text-neutral-600">
-                      giasi-dev-portfolio
+                      sidhique-portfolio
                     </span>
                   </div>
                 </div>
@@ -319,7 +319,7 @@ function Navbar() {
                   <FaArrowRight className="w-3 h-3" />
                 </button>
                 <p className="text-[10px] text-neutral-600 text-center">
-                  © 2026 Nguyen Tran Gia Si
+                  © 2026 Sidhique
                 </p>
               </div>
             </motion.aside>

@@ -13,17 +13,17 @@ const Footer = () => {
     {
       name: 'GitHub',
       icon: FaGithub,
-      url: 'https://github.com/giasinguyen'
+      url: 'https://github.com/sideque'
     },
     {
       name: 'LinkedIn',
       icon: FaLinkedin,
-      url: 'https://linkedin.com/in/giasinguyen'
+      url: 'https://www.linkedin.com/in/sidhiee/'
     },
     {
       name: 'Email',
       icon: FaEnvelope,
-      url: 'mailto:giasinguyentran@gmail.com'
+      url: 'mailto:sidhiqueper@gmail.com'
     }
   ]
 
@@ -54,7 +54,7 @@ const Footer = () => {
             whileHover={{ scale: 1.02 }}
           >
             <span className="text-2xl font-bold text-neutral-100 tracking-tight">
-              Nguyen Tran Gia Si
+              Aboobakkar Sidhique 
             </span>
             <span className="text-amber-500 text-2xl">.</span>
           </motion.a>
@@ -109,7 +109,7 @@ const Footer = () => {
               >
                 <FaHeart className="text-xs" />
               </motion.span>
-              by <span className="text-neutral-400">Nguyen Tran Gia Si</span>
+              by <span className="text-neutral-400">Sidhique</span>
             </span>
             <span className="text-neutral-600">
               © {currentYear} All rights reserved.

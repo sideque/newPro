@@ -9,16 +9,22 @@ import {
   FaDownload,
 } from "react-icons/fa";
 import {
-  SiSpringboot,
   SiReact,
   SiTailwindcss,
-  SiTypescript,
-  SiSpring,
-  SiDocker,
-  SiPostgresql,
+  // SiTypescript,
   SiMongodb,
-  SiRedis,
-  SiNextdotjs,
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiBootstrap,
+  SiNodedotjs,
+  SiMongoose,
+  SiExpress,
+  SiJsonwebtokens,
+  // SiNodemailer,
+  SiGit,
+  SiGithub,
+  SiEjs,
 } from "react-icons/si";
 
 // Lazy load gsap for desktop animations
@@ -61,17 +67,32 @@ function StatCard({ value, label, suffix = "+" }) {
 /* ─── Marquee tech ticker ─── */
 function TechMarquee() {
   const techs = [
-    { icon: FaJava, name: "Java", color: "text-red-400" },
-    { icon: SiSpringboot, name: "Spring Boot", color: "text-green-400" },
-    { icon: SiSpring, name: "Spring", color: "text-green-500" },
+    // 🌐 Frontend
+    { icon: SiHtml5, name: "HTML5", color: "text-orange-500" },
+    { icon: SiCss3, name: "CSS3", color: "text-blue-500" },
+    { icon: SiJavascript, name: "JavaScript", color: "text-yellow-400" },
     { icon: SiReact, name: "React", color: "text-cyan-400" },
-    { icon: SiNextdotjs, name: "Next.js", color: "text-white" },
-    { icon: SiTypescript, name: "TypeScript", color: "text-blue-400" },
-    { icon: SiTailwindcss, name: "Tailwind", color: "text-teal-400" },
-    { icon: SiPostgresql, name: "PostgreSQL", color: "text-blue-300" },
+    { icon: SiBootstrap, name: "Bootstrap", color: "text-purple-500" },
+    { icon: SiTailwindcss, name: "Tailwind CSS", color: "text-teal-400" },
+
+    // ⚙️ Backend
+    { icon: SiNodedotjs, name: "Node.js", color: "text-green-500" },
+    { icon: SiExpress, name: "Express.js", color: "text-gray-400" },
+
+    // 🗄️ Database
     { icon: SiMongodb, name: "MongoDB", color: "text-green-400" },
-    { icon: SiRedis, name: "Redis", color: "text-red-500" },
-    { icon: SiDocker, name: "Docker", color: "text-blue-400" },
+    { icon: SiMongoose, name: "Mongoose", color: "text-red-500" },
+
+    // 🔐 Authentication & Tools
+    { icon: SiJsonwebtokens, name: "JWT", color: "text-pink-400" },
+    // { icon: SiNodemailer, name: "Nodemailer", color: "text-green-300" },
+
+    // 🛠️ Tools & Version Control
+    { icon: SiGit, name: "Git", color: "text-red-400" },
+    { icon: SiGithub, name: "GitHub", color: "text-white" },
+
+    // 🎨 Templating / Others
+    { icon: SiEjs, name: "EJS", color: "text-gray-300" },
   ];
 
   // Duplicate for seamless loop
@@ -216,11 +237,11 @@ function Home() {
             {/* Name */}
             <h1 className="hero-element">
               <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.08] tracking-tight">
-                <span className="text-neutral-50">Nguyen Tran</span>
+                <span className="text-neutral-50">Aboobakkar</span>
                 <br />
                 <span className="relative inline-block">
                   <span className="bg-gradient-to-r from-amber-300 via-amber-400 to-amber-600 bg-clip-text text-transparent">
-                    Gia Si
+                    Sidhique
                   </span>
                 </span>
               </span>
@@ -231,10 +252,10 @@ function Home() {
               <span className="text-xl md:text-2xl font-semibold text-neutral-300">
                 <TypeWriter
                   texts={[
-                    "Java Backend Developer",
-                    "Spring Boot Specialist",
-                    "Full Stack Engineer",
-                    "Team Leader",
+                    "MERN Stack Developer",
+                    "Crafting Modern Web Experiences",
+                    "Building Real-World Applications",
+                    "Future Software Engineer",
                   ]}
                   delay={isMobile ? 100 : 80}
                   deleteDelay={isMobile ? 50 : 30}
@@ -244,16 +265,18 @@ function Home() {
 
             {/* Description */}
             <p className="hero-element text-neutral-400 text-base md:text-lg leading-relaxed max-w-xl">
-              Final-year{" "}
+              I'm a{" "}
               <span className="text-amber-400 font-semibold">
-                Software Engineering
+                MERN Stack Developer
               </span>{" "}
-              student building scalable systems with{" "}
+              focused on building high-performance, scalable web applications
+              using{" "}
               <span className="text-amber-400 font-semibold">
-                Java, Spring Boot & React
+                MongoDB, Express, React & Node.js
               </span>
-              . Leading teams to ship real-world products — from e-commerce
-              platforms to real-time messaging apps.
+              . I specialize in creating real-world products like e-commerce
+              platforms, secure authentication systems, and dynamic user
+              experiences.
             </p>
 
             {/* CTA row */}
@@ -285,7 +308,7 @@ function Home() {
             {/* Social links */}
             <div className="hero-element flex gap-3 pt-1">
               <a
-                href="https://github.com/giasinguyen"
+                href="https://github.com/sideque"
                 target="_blank"
                 rel="noreferrer"
                 className="p-3 text-neutral-500 hover:text-amber-400 bg-neutral-900/50 hover:bg-neutral-800/80 border border-neutral-800/50 hover:border-amber-500/30 rounded-xl transition-all duration-300"
@@ -294,7 +317,7 @@ function Home() {
                 <FaGithub className="h-5 w-5" />
               </a>
               <a
-                href="https://linkedin.com/in/giasinguyen"
+                href="https://linkedin.com/in/sidhiee"
                 target="_blank"
                 rel="noreferrer"
                 className="p-3 text-neutral-500 hover:text-amber-400 bg-neutral-900/50 hover:bg-neutral-800/80 border border-neutral-800/50 hover:border-amber-500/30 rounded-xl transition-all duration-300"
@@ -318,7 +341,7 @@ function Home() {
                   <span className="w-3 h-3 rounded-full bg-yellow-500/80" />
                   <span className="w-3 h-3 rounded-full bg-green-500/80" />
                   <span className="ml-3 text-xs text-neutral-600 font-mono">
-                    ~/giasi-dev
+                    ~/sidhique-dev
                   </span>
                 </div>
 
@@ -327,20 +350,20 @@ function Home() {
                   <div>
                     <span className="text-amber-500">$</span>{" "}
                     <span className="text-neutral-400">whoami</span>
-                    <p className="text-green-400 mt-1 pl-4">Gia Si Nguyen</p>
+                    <p className="text-green-400 mt-1 pl-4">Sidhique</p>
                   </div>
                   <div>
                     <span className="text-amber-500">$</span>{" "}
                     <span className="text-neutral-400">cat role.txt</span>
                     <p className="text-cyan-400 mt-1 pl-4">
-                      Full Stack Developer
+                      MERN Stack Developer
                     </p>
                   </div>
                   <div>
                     <span className="text-amber-500">$</span>{" "}
                     <span className="text-neutral-400">cat focus.txt</span>
                     <p className="text-amber-300 mt-1 pl-4">
-                      Java · Spring Boot · React
+                      MongoDB · Express · React · Node.js
                     </p>
                   </div>
                   <div>
@@ -348,7 +371,7 @@ function Home() {
                     <span className="text-neutral-400">echo $STATUS</span>
                     <p className="text-green-400 mt-1 pl-4 flex items-center gap-2">
                       <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                      Ready to build
+                      Ready to build real-world applications
                     </p>
                   </div>
                 </div>
@@ -376,10 +399,10 @@ function Home() {
         {/* ══════════ STATS BAR ══════════ */}
         <div className="hero-element">
           <div className="flex flex-wrap justify-center gap-2 md:gap-0 md:divide-x divide-neutral-800 bg-neutral-900/50 border border-neutral-800/60 rounded-2xl backdrop-blur-sm py-2">
-            <StatCard value="8" label="Projects" />
-            <StatCard value="4" label="Team Projects" />
-            <StatCard value="10" label="Technologies" />
-            <StatCard value="3.48" label="GPA" suffix="/4.0" />
+            <StatCard value="5" label="Real-World Projects" />
+            <StatCard value="2" label="Team Collaborations" />
+            <StatCard value="12" label="Technologies Used" />
+            <StatCard value="∞" label="Learning & Growth" />
           </div>
         </div>
 
