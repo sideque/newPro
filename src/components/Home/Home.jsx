@@ -14,7 +14,7 @@ import {
   // SiTypescript,
   SiMongodb,
   SiHtml5,
-  SiCss3,
+  SiCss,
   SiJavascript,
   SiBootstrap,
   SiNodedotjs,
@@ -69,7 +69,7 @@ function TechMarquee() {
   const techs = [
     // 🌐 Frontend
     { icon: SiHtml5, name: "HTML5", color: "text-orange-500" },
-    { icon: SiCss3, name: "CSS3", color: "text-blue-500" },
+    { icon: SiCss, name: "CSS", color: "text-blue-500" },
     { icon: SiJavascript, name: "JavaScript", color: "text-yellow-400" },
     { icon: SiReact, name: "React", color: "text-cyan-400" },
     { icon: SiBootstrap, name: "Bootstrap", color: "text-purple-500" },
