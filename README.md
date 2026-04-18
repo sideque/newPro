@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div align="center">
 
 <!-- Logo & Title -->
@@ -430,3 +431,6 @@ copies of the Software...
   <br />
   <sub>© 2025 All Rights Reserved</sub>
 </div>
+=======
+# newPro
+>>>>>>> cd85d00947893f52db615013183c780bb486b3db
