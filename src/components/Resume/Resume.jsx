@@ -22,7 +22,7 @@ function Resume() {
 
   const handleDownloadPDF = useCallback(() => {
     const link = document.createElement('a')
-    link.href = '/documents/Aboobakkar_Sidhique.pdf'
+    link.href = '/Aboobakkar_Sidhique.pdf'
     link.download = 'Aboobakkar_Sidhique.pdf'
     document.body.appendChild(link)
     link.click()
